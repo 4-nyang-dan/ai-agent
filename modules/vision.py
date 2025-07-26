@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# OpenAI 클라이언트 초기화
+
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 def image_to_base64(image_path: str) -> str:
@@ -75,7 +75,7 @@ def analyze_blurred_image(image_path: str) -> dict:
         return {"error": f"API 호출 중 오류 발생: {e}"}
 
 if __name__ == "__main__":
-    test_image_path = "test_image_2.png"
+    test_image_path = "test_image_1.png"
     
     print(f"'{test_image_path}' 이미지 분석을 시작합니다...")
     analysis_result = analyze_blurred_image(test_image_path)
